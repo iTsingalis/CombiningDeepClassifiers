@@ -1,0 +1,36 @@
+{
+    "results_dir": "/media/blue/tsingalis/DevIDFusion/audio/results1D/",
+    "project_dir": "/media/blue/tsingalis/DevIDFusion/",
+    "audio_frame_indices_dir": "/media/red/sharedFolder/Datasets/VISION/AudioFrameIndices/I/",
+    "extracted_wav_dir": "/media/blue/tsingalis/DevIDFusion/audio/extractedWav/",
+    "data_loader_fold_type": "my_data_I",
+    "excluded_devices": [
+        "D12"
+    ],
+    "cuda": 0,
+    "epochs": 15,
+    "train_batch": 128,
+    "valid_batch": 128,
+    "num_workers": 10,
+    "lr": 0.0001,
+    "weight_decay": 0.001,
+    "extend_duration_sec": 2,
+    "augment": false,
+    "log_mel": true,
+    "n_mels": 128,
+    "min_snr_in_db": -2,
+    "max_snr_in_db": 2,
+    "nfft_scale": 2,
+    "log_softmax": false,
+    "softmax": true,
+    "milestones": [
+        "2",
+        "4",
+        "8"
+    ],
+    "optimizer": "Adam",
+    "model": "ResNet18",
+    "data_content": "WA",
+    "n_fold": 2,
+    "reduction": false
+}
