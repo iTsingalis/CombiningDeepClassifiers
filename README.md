@@ -131,7 +131,7 @@ Run the script
 
 This script creates the folder 
 ```angular2
-'/CombiningDeepClassifiers/folds/my_folds/'
+'/CombiningDeepClassifiers/dataLoaderFolds/my_data_I/'
  ```
 with subfolders `Native`, `WA`, and `YT`, and structure
 
