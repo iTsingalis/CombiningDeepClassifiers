@@ -236,6 +236,8 @@ with subfolders `Native`, `WA`, and `YT`, and structure
 
 These pickle files will we loaded by the data loaders and contain the audio, image pairs (patterns) used to train the neural network models.
 
+#### Alternatively, you can download the folder my_data_I from [here]().
+
 ### 7. Extract Video I-Frame (images) 
 
 Run the script 
