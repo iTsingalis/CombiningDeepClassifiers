@@ -18,12 +18,12 @@ the combined classifiers are trained on data manipulated by online social networ
 ### 2. Download datasets
 You can download the VISION dataset from [here](https://lesc.dinfo.unifi.it/VISION/) using the script 
 ```angular2
-'/CombiningDeepClassifiers/VISION/downloadVISION.py'
+/CombiningDeepClassifiers/VISION/downloadVISION.py
 ```
 ### 3. Extract audio (.wav) files from videos
 Run the script 
 ```angular2
-'/CombiningDeepClassifiers/audio/extractWav.py'
+/CombiningDeepClassifiers/audio/extractWav.py
 ```
 This script creates the folder 
 ```angular2
@@ -67,7 +67,7 @@ respectively.
 
 Run the script 
 ```angular2
-'/CombiningDeepClassifiers/audio/extractMel.py'
+/CombiningDeepClassifiers/audio/extractMel.py
 ```
 
 This script creates the folder 
@@ -113,7 +113,7 @@ with structure
 
 Run the script 
 ```angular2
-'/CombiningDeepClassifiers/folds/create_splits.py'
+/CombiningDeepClassifiers/folds/create_splits.py
 ```
 
 This script creates the folder 
@@ -122,7 +122,121 @@ This script creates the folder
  ```
 with subfolders `Native`, `WA`, and `YT`.
 
-### 6. Extract Video I-Frame (images) 
+### 6. Create data loader folds (pickle files)
+
+Run the script 
+```angular2
+/CombiningDeepClassifiers/createDataLoaderFolds.py --output_dir /media/red/tsingalis/gitRepositories/CombiningDeepClassifiers/dataLoaderFolds/my_data_I --vision_audio_frames_dir /media/red/sharedFolder/Datasets/VISION/AudioFrameIndices/I --visual_content Native --fold_dir /media/red/tsingalis/gitRepositories/CombiningDeepClassifiers/folds/my_folds --n_fold 1 --excluded_devices D12 --extend_duration_sec 2
+```
+
+This script creates the folder 
+```angular2
+'/CombiningDeepClassifiers/folds/my_folds/'
+ ```
+with subfolders `Native`, `WA`, and `YT`, and structure
+
+```angular2
+├── my_data_I
+│   └── winSize2sec
+│       ├── Native_D12_Excluded
+│       │   ├── test_audio_image_fold0.pkl
+│       │   ├── test_audio_image_fold1.pkl
+│       │   ├── test_audio_image_fold2.pkl
+│       │   ├── test_audio_image_fold3.pkl
+│       │   ├── test_audio_image_fold4.pkl
+│       │   ├── test_audio_image_priors_fold0.pkl
+│       │   ├── test_audio_image_priors_fold1.pkl
+│       │   ├── test_audio_image_priors_fold2.pkl
+│       │   ├── test_audio_image_priors_fold3.pkl
+│       │   ├── test_audio_image_priors_fold4.pkl
+│       │   ├── train_audio_image_fold0.pkl
+│       │   ├── train_audio_image_fold1.pkl
+│       │   ├── train_audio_image_fold2.pkl
+│       │   ├── train_audio_image_fold3.pkl
+│       │   ├── train_audio_image_fold4.pkl
+│       │   ├── train_audio_image_priors_fold0.pkl
+│       │   ├── train_audio_image_priors_fold1.pkl
+│       │   ├── train_audio_image_priors_fold2.pkl
+│       │   ├── train_audio_image_priors_fold3.pkl
+│       │   ├── train_audio_image_priors_fold4.pkl
+│       │   ├── valid_audio_image_fold0.pkl
+│       │   ├── valid_audio_image_fold1.pkl
+│       │   ├── valid_audio_image_fold2.pkl
+│       │   ├── valid_audio_image_fold3.pkl
+│       │   ├── valid_audio_image_fold4.pkl
+│       │   ├── valid_audio_image_priors_fold0.pkl
+│       │   ├── valid_audio_image_priors_fold1.pkl
+│       │   ├── valid_audio_image_priors_fold2.pkl
+│       │   ├── valid_audio_image_priors_fold3.pkl
+│       │   └── valid_audio_image_priors_fold4.pkl
+│       ├── WA_D12_Excluded
+│       │   ├── test_audio_image_fold0.pkl
+│       │   ├── test_audio_image_fold1.pkl
+│       │   ├── test_audio_image_fold2.pkl
+│       │   ├── test_audio_image_fold3.pkl
+│       │   ├── test_audio_image_fold4.pkl
+│       │   ├── test_audio_image_priors_fold0.pkl
+│       │   ├── test_audio_image_priors_fold1.pkl
+│       │   ├── test_audio_image_priors_fold2.pkl
+│       │   ├── test_audio_image_priors_fold3.pkl
+│       │   ├── test_audio_image_priors_fold4.pkl
+│       │   ├── train_audio_image_fold0.pkl
+│       │   ├── train_audio_image_fold1.pkl
+│       │   ├── train_audio_image_fold2.pkl
+│       │   ├── train_audio_image_fold3.pkl
+│       │   ├── train_audio_image_fold4.pkl
+│       │   ├── train_audio_image_priors_fold0.pkl
+│       │   ├── train_audio_image_priors_fold1.pkl
+│       │   ├── train_audio_image_priors_fold2.pkl
+│       │   ├── train_audio_image_priors_fold3.pkl
+│       │   ├── train_audio_image_priors_fold4.pkl
+│       │   ├── valid_audio_image_fold0.pkl
+│       │   ├── valid_audio_image_fold1.pkl
+│       │   ├── valid_audio_image_fold2.pkl
+│       │   ├── valid_audio_image_fold3.pkl
+│       │   ├── valid_audio_image_fold4.pkl
+│       │   ├── valid_audio_image_priors_fold0.pkl
+│       │   ├── valid_audio_image_priors_fold1.pkl
+│       │   ├── valid_audio_image_priors_fold2.pkl
+│       │   ├── valid_audio_image_priors_fold3.pkl
+│       │   └── valid_audio_image_priors_fold4.pkl
+│       └── YT_D12_Excluded
+│           ├── test_audio_image_fold0.pkl
+│           ├── test_audio_image_fold1.pkl
+│           ├── test_audio_image_fold2.pkl
+│           ├── test_audio_image_fold3.pkl
+│           ├── test_audio_image_fold4.pkl
+│           ├── test_audio_image_priors_fold0.pkl
+│           ├── test_audio_image_priors_fold1.pkl
+│           ├── test_audio_image_priors_fold2.pkl
+│           ├── test_audio_image_priors_fold3.pkl
+│           ├── test_audio_image_priors_fold4.pkl
+│           ├── train_audio_image_fold0.pkl
+│           ├── train_audio_image_fold1.pkl
+│           ├── train_audio_image_fold2.pkl
+│           ├── train_audio_image_fold3.pkl
+│           ├── train_audio_image_fold4.pkl
+│           ├── train_audio_image_priors_fold0.pkl
+│           ├── train_audio_image_priors_fold1.pkl
+│           ├── train_audio_image_priors_fold2.pkl
+│           ├── train_audio_image_priors_fold3.pkl
+│           ├── train_audio_image_priors_fold4.pkl
+│           ├── valid_audio_image_fold0.pkl
+│           ├── valid_audio_image_fold1.pkl
+│           ├── valid_audio_image_fold2.pkl
+│           ├── valid_audio_image_fold3.pkl
+│           ├── valid_audio_image_fold4.pkl
+│           ├── valid_audio_image_priors_fold0.pkl
+│           ├── valid_audio_image_priors_fold1.pkl
+│           ├── valid_audio_image_priors_fold2.pkl
+│           ├── valid_audio_image_priors_fold3.pkl
+│           └── valid_audio_image_priors_fold4.pkl
+└── 
+ ```
+
+These pickle files will we loaded by the data loaders and contain the audio, image pairs (patterns) used to train the neural network models.
+
+### 7. Extract Video I-Frame (images) 
 
 Run the script 
 ```angular2
