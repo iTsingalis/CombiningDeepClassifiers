@@ -53,13 +53,16 @@ with structure
 ```
 
 #### Alternatively, extract the audio modality related files from [here](), [here](), and [here]() into the folders 
+
 ```angular2
 '/CombiningDeepClassifiers/audio/extractedMel/', 
 '/CombiningDeepClassifiers/audio/extractedWav/', and 
 '/CombiningDeepClassifiers/audio/results1D/',
 ```
+
 respectively.
-- 
+
+
 ### 4. Extract log mel spectrograms from the audio (.wav) files
 
 Run the script 
