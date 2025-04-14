@@ -52,12 +52,10 @@ with structure
 ...
 ```
 
-#### Alternatively, extract the audio modality related files from [here](), [here](), and [here]() into the folders 
+#### Alternatively, download the .wav files from [here](https://drive.google.com/file/d/1bJnpXSC3Ya-KuKVYNSTzsa5ExTMe15_g/view?usp=sharing), into the folder 
 
 ```angular2
-'/CombiningDeepClassifiers/audio/extractedMel/', 
-'/CombiningDeepClassifiers/audio/extractedWav/', and 
-'/CombiningDeepClassifiers/audio/results1D/',
+'/CombiningDeepClassifiers/audio/extractedWav/' 
 ```
 
 respectively.
@@ -104,9 +102,10 @@ with structure
 │   └── D01_V_flatWA_move_0001.pkl
 ```
 
-#### Alternatively, extract the image modality related file from [here]() into the folder
+#### Alternatively, download the log-Mel spectrogram from [here](https://drive.google.com/file/d/11MedlSUhNVOY_DXYyPSDybJ0QW0MUPFM/view?usp=sharing), into the folder
 ```angular2
-'/CombiningDeepClassifiers/audio/results/'.
+/CombiningDeepClassifiers/audio/extractedMel/
+
 ```
 
 ### 5. Create training, evaluation and test Splits (a.k.a. folds)
@@ -236,7 +235,7 @@ with subfolders `Native`, `WA`, and `YT`, and structure
 
 These pickle files will we loaded by the data loaders and contain the audio, image pairs (patterns) used to train the neural network models.
 
-#### Alternatively, you can download the folder my_data_I from [here]().
+#### Alternatively, you can download the folder my_data_I from [here](https://drive.google.com/file/d/15bHMMlg9JfFSrGUgBMwoW-bbulHrdsEW/view?usp=sharing).
 
 ### 7. Extract Video I-Frame (images) 
 
