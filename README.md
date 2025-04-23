@@ -540,11 +540,13 @@ To run this script you need to test the fine-tuned models in the previous steps 
 If you use this code in your experiments please cite this work by using the following bibtex entry:
 
 ```
-@article{referenceID2025,
-  author    = {Ioannis Tsingalis and Constantine Kotropoulos},
-  title     = {On Combining Deep Neural Network Classifiers for Source Device Identification},
-  journal   = {IEEE Access},
-  year      = {2025},
-  publisher = {IEEE}
-}
+@article{10942326,
+  author={Tsingalis, Ioannis and Kotropoulos, Constantine},
+  journal={IEEE Access}, 
+  title={On Combining Deep Neural Network Classifiers for Source Device Identification}, 
+  year={2025},
+  volume={13},
+  number={},
+  pages={58425-58441},
+  doi={10.1109/ACCESS.2025.3555141}}
 ```
