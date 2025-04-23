@@ -1,5 +1,5 @@
 # On Combining Deep Neural Network Classifiers for Source Device Identification
-This repository contains the code for the paper On Combining Deep Neural Network Classifiers for Source Device Identification introduced by Ioannis Tsingalis and Constantine Kotropoulos
+This repository contains the code for the paper [On Combining Deep Neural Network Classifiers for Source Device Identification introduced by Ioannis Tsingalis and Constantine Kotropoulos](https://ieeexplore.ieee.org/document/10942326)
 
 ## Abstract
 This paper proposes combining deep neural network classifiers while simultaneously optimizing the networks. 
